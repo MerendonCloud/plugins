@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="stashrelay">
+  <rect width="128" height="128" rx="28" fill="#000000"/>
+  <!-- stack of stashed items, newest on top -->
+  <rect x="30" y="78" width="68" height="12" rx="6" fill="#3b82f6" opacity="0.35"/>
+  <rect x="30" y="58" width="68" height="12" rx="6" fill="#3b82f6" opacity="0.65"/>
+  <rect x="30" y="38" width="68" height="12" rx="6" fill="#3b82f6"/>
+  <!-- relay arrow: out of one surface, into another -->
+  <path d="M46 104h24" stroke="#ededed" stroke-width="8" stroke-linecap="round"/>
+  <path d="M70 104l-9 -9M70 104l-9 9" stroke="#ededed" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

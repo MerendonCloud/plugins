@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "handfrank": {
+      "type": "http",
+      "url": "https://handfrank.io/mcp"
+    }
+  }
+}

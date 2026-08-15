@@ -1,0 +1,14 @@
+{
+  "name": "handfrank",
+  "displayName": "Handfrank",
+  "description": "Gated agent messaging. Humans control what agents see and what leaves: read released mail and prepare drafts as an approved identity — agents never send, the owner approves every outbound message.",
+  "author": {
+    "name": "Merendon Cloud",
+    "email": "contact@merendoncloud.com",
+    "url": "https://merendoncloud.com"
+  },
+  "homepage": "https://handfrank.io",
+  "repository": "https://github.com/MerendonCloud/plugins",
+  "license": "MIT",
+  "keywords": ["email", "messaging", "agents", "review", "mcp"]
+}

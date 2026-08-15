@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "stashrelay": {
+      "type": "http",
+      "url": "https://stashrelay.io/mcp"
+    }
+  }
+}
