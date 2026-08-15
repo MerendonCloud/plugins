@@ -1,0 +1,14 @@
+{
+  "name": "stashrelay",
+  "displayName": "stashrelay",
+  "description": "A clipboard for your AI apps. Stash text in one AI conversation and pick it up in another — from any connected client, including your other devices. Stashing copies content and never modifies your files.",
+  "author": {
+    "name": "Merendon Cloud",
+    "email": "contact@merendoncloud.com",
+    "url": "https://merendoncloud.com"
+  },
+  "homepage": "https://stashrelay.io",
+  "repository": "https://github.com/MerendonCloud/plugins",
+  "license": "MIT",
+  "keywords": ["clipboard", "handoff", "cross-device", "mcp", "stash"]
+}
