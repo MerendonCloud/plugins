@@ -5,8 +5,8 @@
     "email": "contact@merendoncloud.com"
   },
   "metadata": {
-    "description": "Merendon Cloud plugins — connect stashrelay and Handfrank to your AI tools.",
-    "version": "0.1.1"
+    "description": "Connect multiple sessions or agents together to improve workflows",
+    "version": "0.1.2"
   },
   "plugins": [
     {

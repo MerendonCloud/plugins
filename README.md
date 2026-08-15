@@ -1,6 +1,6 @@
 # Merendon Cloud plugins
 
-Official plugin source for [Merendon Cloud](https://merendoncloud.com) products. One repo, two catalogs: it is a **Claude Code plugin marketplace** (`.claude-plugin/marketplace.json`) and a **Cursor plugin marketplace** (`.cursor-plugin/marketplace.json`) at the same time.
+Connect multiple sessions or agents together to improve workflows. The official plugin source for [Merendon Cloud](https://merendoncloud.com) products — one repo, two catalogs: it is a **Claude Code plugin marketplace** (`.claude-plugin/marketplace.json`) and a **Cursor plugin marketplace** (`.cursor-plugin/marketplace.json`) at the same time.
 
 | Plugin | What it is | Website |
 | --- | --- | --- |
