@@ -5,7 +5,7 @@
     "email": "contact@merendoncloud.com",
     "url": "https://merendoncloud.com"
   },
-  "description": "Merendon Cloud plugins — connect StashRelay and Handfrank to your AI tools.",
+  "description": "Merendon Cloud plugins — connect stashrelay and Handfrank to your AI tools.",
   "plugins": [
     {
       "name": "stashrelay",

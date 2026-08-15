@@ -203,10 +203,13 @@ async function scanDenylist() {
         if (!skipDirs.has(entry.name)) stack.push(entryPath);
         continue;
       }
-      if (![".md", ".json", ".svg", ".yml", ".yaml", ".txt", ".mdc"].includes(path.extname(entry.name).toLowerCase())) continue;
+      const ext = path.extname(entry.name).toLowerCase();
+      if (ext !== "" && ![".md", ".json", ".svg", ".yml", ".yaml", ".txt", ".mdc"].includes(ext)) continue;
       const content = (await fs.readFile(entryPath, "utf8")).toLowerCase();
       for (const term of DENYLIST) {
-        if (new RegExp(`\\b${term}\\b`, "i").test(content)) {
+        // Prefix match on purpose: joined forms like REDIS_URL or PostgreSQL
+        // are exactly the shape an internals leak takes.
+        if (new RegExp(`\\b${term}`, "i").test(content)) {
           addError(`${path.relative(repoRoot, entryPath)}: mentions "${term}" — internals and providers must not appear in published copy (docs/PRINCIPLES.md §2).`);
         }
       }
@@ -272,6 +275,15 @@ async function main() {
       if (cursorManifest.displayName !== claudeManifest.displayName) {
         addError(`${entry.name}: displayName differs between the Cursor and Claude manifests.`);
       }
+    }
+    // Catalog blurbs are the first copy a user or model sees; they must not
+    // drift from the manifests (PRINCIPLES.md §1).
+    if (claudeManifest && entry.description !== claudeManifest.description) {
+      addError(`${entry.name}: Claude catalog description differs from its plugin.json description (PRINCIPLES.md §1).`);
+    }
+    const cursorEntry = cursorPlugins.find((p) => p.name === entry.name);
+    if (cursorEntry && cursorManifest && cursorEntry.description !== cursorManifest.description) {
+      addError(`${entry.name}: Cursor catalog description differs from its plugin.json description (PRINCIPLES.md §1).`);
     }
     if (cursorManifest && typeof cursorManifest.version !== "string") {
       addError(`${entry.name}: Cursor plugin.json must carry a version (PRINCIPLES.md §4).`);

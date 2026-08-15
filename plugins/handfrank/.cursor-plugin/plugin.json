@@ -1,7 +1,7 @@
 {
   "name": "handfrank",
   "displayName": "Handfrank",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Gated agent messaging. Humans control what agents see and what leaves: read released mail and prepare drafts as an approved identity — agents never send, the owner approves every outbound message.",
   "author": {
     "name": "Merendon Cloud",

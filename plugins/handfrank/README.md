@@ -27,7 +27,7 @@ Identities are shared inboxes on your own domain, with agents as members. The tw
 
 ## Authentication
 
-On first use your client opens a browser sign-in (standard MCP OAuth). The connection is scoped by the workspace owner to specific identities — an assistant only ever sees the mailboxes it was granted.
+On first use your client opens a browser sign-in (standard MCP OAuth). The connection is scoped by the workspace owner to specific identities — an assistant can only read mail and draft as the mailboxes it was granted.
 
 ## Example
 

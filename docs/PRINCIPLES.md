@@ -6,6 +6,7 @@ The rules this repo is maintained against. A change that violates one of these i
 
 - Every plugin ships **both** manifests: `.claude-plugin/plugin.json` (Claude Code) and `.cursor-plugin/plugin.json` (Cursor), and both marketplace catalogs list the same plugin set.
 - `name`, `displayName`, `description`, and `author` must say the same thing in both manifests. Formats differ; the story may not.
+- Catalog entries carry the same `description` byte-for-byte as the plugin manifest they point at. The catalog blurb is the first copy a user or model sees; it is not a place to abbreviate — the validator fails on drift.
 - MCP endpoints are declared twice because the formats differ deliberately: `.mcp.json` uses Claude Code's `{"type": "http", "url": …}` (an entry with `url` but no `type` is a configuration error there), `mcp.json` uses Cursor's bare `{"url": …}`. Keep the URLs identical between the two files.
 - Follow the upstream conventions: [cursor/plugin-template](https://github.com/cursor/plugin-template) for the Cursor side, [code.claude.com/docs/en/plugin-marketplaces](https://code.claude.com/docs/en/plugin-marketplaces) and [plugins-reference](https://code.claude.com/docs/en/plugins-reference) for the Claude side. When upstream conventions change, this repo follows.
 
