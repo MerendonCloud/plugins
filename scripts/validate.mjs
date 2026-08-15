@@ -20,19 +20,44 @@ const pluginNamePattern = /^[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?$/;
 const marketplaceNamePattern = /^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
 // Principle 2: public surface only. Infrastructure and vendor names must not
-// appear anywhere in the published catalog.
+// appear anywhere in the published catalog. The list is deliberately broad —
+// common auth, email, database, cache, hosting, and ORM names across the
+// industry — so it lints a category without describing any particular stack.
 const DENYLIST = [
+  "auth0",
+  "aws",
+  "azure",
   "clerk",
-  "resend",
-  "neon",
-  "upstash",
-  "redis",
-  "vercel",
+  "cloudflare",
+  "cognito",
+  "docker",
   "drizzle",
-  "mailpit",
-  "postgres",
+  "dynamodb",
+  "firebase",
+  "gcp",
   "ioredis",
-  "hkdf",
+  "kubernetes",
+  "mailgun",
+  "mailpit",
+  "memcached",
+  "mongodb",
+  "mysql",
+  "neon",
+  "netlify",
+  "okta",
+  "planetscale",
+  "postgres",
+  "postmark",
+  "prisma",
+  "redis",
+  "resend",
+  "sendgrid",
+  "smtp",
+  "sqlite",
+  "supabase",
+  "upstash",
+  "valkey",
+  "vercel",
 ];
 
 function addError(message) {
