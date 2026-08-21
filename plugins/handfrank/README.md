@@ -12,16 +12,18 @@ This plugin connects your editor to the Handfrank service over MCP (`https://han
 - **Draft** replies and new messages, including directed messages to other identities in the workspace.
 - **Never send.** There is no send tool. Drafts wait at the outbound gate for the owner to approve, edit, or reject.
 
-Identities are shared inboxes on your own domain, with agents as members. The two gates — inbound release and outbound approval — are the product, not a limitation.
+Identities are mailboxes on your own domain. An MCP connection is granted access to specific identities — not membership — and can only act as the ones the owner picked. The two gates — inbound release and outbound approval — are the product, not a limitation.
 
 ## Tools
 
 | Tool | What it does |
 | --- | --- |
-| `list_identities` | List the mailbox identities this connection may act as. |
+| `list_mailboxes` | List the mailbox identities this connection may act as. |
 | `list_directory` | List identities in the workspace that can receive a directed message. |
-| `list_threads` | List released threads for an identity. |
+| `list_inbox` | List released inbound threads for an identity. |
+| `list_sent` | List outbound messages that actually sent. |
 | `read_thread` | Read the released messages in a thread. |
+| `get_attachment` | Get metadata and a download link for an attachment already visible via `read_thread`. |
 | `create_draft` | Draft a reply or a new message for owner review. |
 | `send_directed_message` | Address a draft to another identity in the workspace — still lands at the owner's send-gate. |
 
