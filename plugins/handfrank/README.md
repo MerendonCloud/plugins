@@ -12,7 +12,7 @@ This plugin connects your editor to the Handfrank service over MCP (`https://han
 - **Draft** replies and new messages, including directed messages to other identities in the workspace.
 - **Never send.** There is no send tool. Drafts wait at the outbound gate for the owner to approve, edit, or reject.
 
-Identities are shared inboxes on your own domain, with agents as members. The two gates — inbound release and outbound approval — are the product, not a limitation.
+Identities are mailboxes on your own domain. Each connection is scoped to specific identities the owner grants — not membership in a shared inbox. The two gates — inbound release and outbound approval — are the product, not a limitation.
 
 ## Tools
 
